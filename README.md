@@ -14,8 +14,8 @@ A Streamlit-powered dashboard that enables users to query, audit, and analyze Gi
 ### Prerequisites
 
 - **Python 3.8+**
-- **Docker**: Used to run the official GitHub MCP Server locally. Ensure Docker Desktop is active.
-- **OpenAI API Key**: Used to interpret user queries.
+- **Node.js**: Used to run the official GitHub MCP Server locally. Ensure Node.js is installed.
+- **Groq AI Key**: Used to interpret user queries.
 - **GitHub Personal Access Token**: Used to fetch data from target repositories.
 
 ### Installation
@@ -30,14 +30,13 @@ A Streamlit-powered dashboard that enables users to query, audit, and analyze Gi
    pip install -r requirements.txt
    ```
 
-3. Ensure Docker is running:
+3. Ensure Node.js is installed and running:
    ```bash
-   docker --version
-   docker ps
+   node --version
    ```
 
 4. Retrieve access tokens:
-   - **OpenAI Key**: From your OpenAI Platform panel.
+   - **Groq AI Key**: From your [Groq Platform](https://console.groq.com/keys).
    - **GitHub Token**: Create a token at `github.com/settings/tokens` with `repo` scope.
 
 ## Launching the Console
@@ -48,7 +47,7 @@ A Streamlit-powered dashboard that enables users to query, audit, and analyze Gi
    ```
 
 2. Inside the dashboard:
-   - Provide your OpenAI Key and GitHub Token in the credentials section.
+   - Provide your Groq AI Key and GitHub Token in the credentials section.
    - Provide your target repository name (e.g., `psf/requests`).
    - Select a query category or type a custom command.
    - Click **Run Query** to view results.
@@ -56,7 +55,7 @@ A Streamlit-powered dashboard that enables users to query, audit, and analyze Gi
 ## Sample Prompts
 
 ### Issue Audits
-- `Find issues matching a specific label`
+- `Find issues matching a specific labels`
 - `Retrieve highly discussed issues`
 
 ### Pull Request Reviews
